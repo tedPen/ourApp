@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DineAround</title>
+    <style type="text/css" media="screen">
+      body {
+        margin: 5% 5%;
+        padding: 0;
+        background-image: url("assets/landing2.jpg");
+        background-size: cover;
+        font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
+        font-size: 13px;
+        color: #fff;
+      }
+
+      h1 {
+        font-size: 28px;
+        color: #fff;
+      }
+
+      a  {color: #fff}
+      a:hover {
+        background-color: #fff;
+        color: #000;
+        text-decoration: none;
+      }
+
+
+      #page {
+        width: 550px;
+        margin: 0;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #000000;
+        opacity: .8;
+        border-radius: 5px;
+      }
+
+      #content {
+        width: 550px;
+        opacity: 1;
+      }
+
+      #footer {
+        clear: both;
+        padding-left:30%;
+        padding-right:30%;
+      }
+
+      #header, #about, #getting-started {
+      }
+
+
+      #header {
+        background-repeat: no-repeat; 
+        background-position: top left;
+        height: 64px; 
+      }
+      #header h1{
+		text-align:center; 
+		margin:0
+		}
+      #header h2 {
+        color: #fff;
+        font-weight: normal;
+        font-size: 16px;
+      }
+
+    </style>
+    	 
+    
+	<link href="/assets/jquery-ui-1.9.2.custom.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/assets/jquery-1.8.3.min.js?body=1" type="text/javascript"></script>
+	<script src="/assets/jquery-ui-1.9.2.custom.min.js?body=1" type="text/javascript"></script>
+    <script>
+    	//$(function() {$( "#dropdown" ).accordion({collapsible: true});
+		//});
+		$(function() {$( "#login-button").button();
+		});
+		$(function() {$( "#sidebar-items").menu();
+		});
+		
+		$(function() {$("#feedback_button").button();
+		});
+    </script>
+    
+    
+  </head>
+  <body>
+    <div id="page">
+      <!--<div id="sidebar">
+        <ul id="sidebar-items">
+          <li><a href="index">Home</a></li>	
+          <li><a href="Contact">Contact</a></li>
+          <li><a href ="AboutUs">About Us</a></li>
+          <li><a href ="feedbacks/new">Give us your Feedback</a></li>
+          <li><a href ="login">Log In</a></li>
+        </ul>
+      </div>-->
+
+      <div id="content">
+        <div id="header">
+        	<br>
+			<i>&nbsp DineAround Presents</i>
+        	<br>
+          <h1 style="font-weight:lighter; font-size: 70px; font-family:'Voltaire', Georgia, serif;" >THE <br>SOCIAL DINING EXPERIMENT</h1>
+		  <br>
+          <h2 style=" text-align:center; color:#00ff99; font-size:20px; font-family:'American Typewriter', Lucida, monospace;"><i>Lets Mix Things Up<i></h2>
+        </div>
+        <br>
+
+		<div style="padding-top:250px; padding-right:20%; padding-left:20%" id="dropdown">
+	        <div id="mainContent">
+        		<div class="form">
+
+				<form accept-charset="UTF-8" action="/login" method="post">
+				    
+				    <div>
+				      <table cellspacing="10">
+				      	<tr>
+				      	  <td>
+				      		<label for="name">Email:</label>
+			      		  </td>
+			      		  <td>
+				      		<input id="name" name="name" type="text" />
+			      		  </td>
+		      			</tr>
+			      		<tr>
+			      		  <td>
+				    		<label for="password">Password:</label>
+			    		  </td>
+				    	  <td>
+				    		<input id="password" name="password" type="password" />
+			    		  </td>
+			      		</tr>
+			      		<tr>
+							<td></td>
+			      			<td align="center">
+				    		  <input style="align:center;" id="login-button" name="commit" type="submit" value="Login" />
+			    			</td>
+		    			</tr>
+				    </table>
+				    </div>
+				</form>
+			</div>
+			</div>
+		</div>
+		<iframe width="550" height="315" src="http://www.youtube.com/embed/-YFfjHaqfh4" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <div id="footer">
+      	<table>
+      		<tr>
+      			<td align=center colspan=3><a href="users/new">Sign Up</a></td>
+  			</tr>
+      		<tr>
+      			<td><a href="index">Home</a></td>
+      			<td><a href="Contact">Feedback</a></td>
+      			<td><a href ="AboutUs">About Us</a></td>
+  			</tr>
+  		</table>
+      	<!--<a id="feedback_button" href="feedbacks/new">Give us your Feedback</a>-->
+      </div>
+    </div>
+  </body>
+</html>

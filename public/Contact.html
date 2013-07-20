@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DineAround</title>
+    <style type="text/css" media="screen">
+      body {
+        margin: 5% 5%;
+        padding: 0;
+        background-image: url("assets/landing2.jpg");
+        background-size: cover;
+        font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
+        font-size: 13px;
+        color: #fff;
+      }
+
+      h1 {
+        font-size: 28px;
+        color: #fff;
+      }
+
+      a  {color: #fff}
+      a:hover {
+        background-color: #fff;
+        color: #000;
+        text-decoration: none;
+      }
+
+
+      #page {
+        width: 550px;
+        margin: 0;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #000000;
+        opacity: .8;
+        border-radius: 5px;
+      }
+
+      #content {
+        width: 550px;
+		padding: 10px;
+        opacity: 1;
+      }
+
+      #footer {
+        clear: both;
+        padding-left:30%;
+        padding-right:30%;
+      }
+
+      #header, #about, #getting-started {
+      }
+
+
+      #header {
+        height: 64px; 
+      }
+      #header h1{
+		text-align:center; 
+		margin:0
+		}
+      #header h2 {
+        color: #fff;
+        font-weight: normal;
+        font-size: 16px;
+      }
+      
+      .field {
+      	padding:5px;
+      }
+
+    </style>
+    	 
+    
+	<link href="/assets/jquery-ui-1.9.2.custom.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/assets/jquery-1.8.3.min.js?body=1" type="text/javascript"></script>
+	<script src="/assets/jquery-ui-1.9.2.custom.min.js?body=1" type="text/javascript"></script>
+    <script>
+    	//$(function() {$( "#dropdown" ).accordion({collapsible: true});
+		//});
+		$(function() {$( "#login-button").button();
+		});
+		$(function() {$( "#submit_feedback").button();
+		});
+		$(function() {$( "#sidebar-items").menu();
+		});
+		$(function() {$("#feedback_form").hide();
+		});
+		$(function() {$("#feedback_button").button();
+			$("#feedback_button").click(function() {
+				$("#feedback_button").hide();
+				$("#feedback_form").show("slide", {direction: "down"}, "slow");})
+		});
+    </script>
+    
+    
+  </head>
+  <body>
+    <div id="page">
+      <!--<div id="sidebar">
+        <ul id="sidebar-items">
+          <li><a href="index">Home</a></li>	
+          <li><a href="Contact">Contact</a></li>
+          <li><a href ="AboutUs">About Us</a></li>
+          <li><a href ="feedbacks/new">Give us your Feedback</a></li>
+          <li><a href ="login">Log In</a></li>
+        </ul>
+      </div>-->
+
+      <div id="content">
+        <div id="header">
+        	<br>
+        	<br>
+          <h1 style="font-family:'Times New Roman', Times, serif;" >About The Team</h1>
+        </div>
+        <br>
+
+		<div>
+	        <div style="width:400px"id="mainContent">
+	        	<ul>
+	        		<li>Teddy Pendergast - Chief Computer and Web Master</li>
+	        		<li>Max Xiao - Chief Errand Boy and deadline man</li>
+	        		<li>Logan Randolph - Chief Hustler and resident neat freak</li>
+        		</ul>
+			</div>
+			<br>
+			We are constantly looking for feedback. After all, this is an experiment.<br>
+			<!--<a href="../sus/new">You can also fill out this form to evaluate the website.</a><br>-->
+			<br>
+			<label id="feedback_button">Give Us Feedback</label>
+			
+		</div>
+		
+		<div id="feedback_form">
+			<form accept-charset="UTF-8" action="/feedbacks" class="new_feedback" id="new_feedback" method="post">
+
+  			  <div class="field">
+			    <label for="feedback_email">Email:</label><br />
+			    <input id="feedback_email" name="feedback[email]" size="30" type="email" />
+			  </div>
+			  <div class="field">
+			    <label for="feedback_content">Description of issue, suggestion, etc.:</label><br />
+			    <textarea cols="40" id="feedback_content" name="feedback[content]" rows="20">
+			</textarea>
+			  </div>
+			  <div class="actions">
+			    <input id="submit_feedback" name="commit" type="submit" value="Send" />
+			  </div>
+			</form>
+		</div>
+      </div>
+
+      <div id="footer">
+      	<table>
+      		<tr>
+      			<td align=center colspan=3><a href="users/new">Sign Up</a></td>
+  			</tr>
+      		<tr>
+      			<td><a href="index">Home</a></td>
+      			<td><a href="Contact">Feedback</a></td>
+      			<td><a href ="AboutUs">About Us</a></td>
+  			</tr>
+  		</table>
+      	<!--<a id="feedback_button" href="feedbacks/new">Give us your Feedback</a>-->
+      </div>
+    </div>
+  </body>
+</html>

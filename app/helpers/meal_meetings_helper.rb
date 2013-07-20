@@ -1,0 +1,2 @@
+module MealMeetingsHelper
+end

@@ -1,0 +1,83 @@
+<p id="notice"><%= notice %></p>
+<%= form_for(@schedule) do |f| %>
+<h2>You've selected to eat:</h2>
+
+<% if @schedule.meal == "lunch" %>
+  <h2 style="padding-left:5em">Lunch at 12:00pm</h2>
+<% end %>
+<% if @schedule.meal == "edinner" %>
+  <h2 style="padding-left:5em">An Early Dinner at 6:30pm</h2>
+<% end %>
+<% if @schedule.meal == "ldinner" %>
+  <h2 style="padding-left:5em">A Late Dinner at 9:00pm</h2>
+<% end %>
+
+<h2 align="center">At</h2>
+
+<% if @schedule.place_mrups == "1" %>
+  <div align="center" style="padding-left:5em">
+    <h2>Two Brothers</h2>
+    <a href="http://www.twobrotherstavern.com/menu/">Check out the menu here</a> <br>
+    <a href="http://www.twobrotherstavern.com/directions/">Get Directions</a>
+  </div>
+<% end %>
+<% if @schedule.place_fireice == "1" %>
+  <div align="center" style="padding-left:5em">
+  <%if @schedule.place_mrups == "1" %>
+  	<h2> OR </h2>
+  <% end %>
+    <h2>Fire & Ice</h2>
+    <a href="http://www.fireandicerestaurant.com/pdfs/menu-1-15-121.pdf">Check out the menu here</a> <br>
+    <a href="https://plus.google.com/113470652055350361948/about?gl=us&hl=en">Get Directions</a>
+  </div>
+<% end %>
+<% if @schedule.place_sabai == "1" %>
+  <div align="center" style="padding-left:5em">
+  <%if @schedule.place_mrups == "1" %>
+  	<h2> OR </h2>
+  <% elsif @schedule.place_fireice == "1"  %>
+    <h2> OR </h2>
+  <% end %>
+    <h2 align="center" style="padding-left:5em">Sabai Sabai</h2>
+    <a href="http://sabaisabaithai.com/thai-menu.php">Check out the menu here</a> <br>
+    <a href="http://sabaisabaithai.com/hours-location.php">Get Directions</a>
+  </div>
+<% end %>
+<% if @schedule.place_pizza == "1" %>
+  <div align="center" style="padding-left:5em">
+  <%if @schedule.place_mrups == "1" %>
+  	<h2> OR </h2>
+  <% elsif @schedule.place_fireice == "1"  %>
+    <h2> OR </h2>
+  <% elsif @schedule.place_sabai == "1"  %>
+    <h2> OR </h2>
+  <% end %>
+    <h2 align="center" style="padding-left:5em">The Grille</h2>
+    <a href="http://menus.middlebury.edu/today/retail">Check out the menu here</a> <br>
+    <a href="http://www.middlebury.edu/about/campus/campusmap/locations/buildings/node/277225">Get Directions</a>
+  </div>
+<% end %>
+<% if @schedule.place_dhall == "1" %>
+  <div align="center" style="padding-left:5em">
+  <%if @schedule.place_mrups == "1" %>
+  	<h2> OR </h2>
+  <% elsif @schedule.place_fireice == "1"  %>
+    <h2> OR </h2>
+  <% elsif @schedule.place_pizza == "1"  %>
+    <h2> OR </h2>
+  <% elsif @schedule.place_sabai == "1"  %>
+    <h2> OR </h2>
+  <% end %>
+    <h2 >Proctor Dining Hall</h2>
+    <a href="linerrr.com">Check out the menu here</a> <br>
+    <a href="http://www.middlebury.edu/about/campus/campusmap/locations/buildings/node/277255">Get Directions</a>
+  </div>
+<% end %>
+
+<% end %>
+<br>
+<%= link_to 'Make Changes', edit_schedule_path(@schedule), id: "edit_button", style: "color:#fff" %>
+
+<script>
+  $("#edit_button").button();
+</script>

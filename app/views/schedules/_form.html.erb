@@ -1,0 +1,182 @@
+<%= form_for(@schedule) do |f| %>
+  <% if @schedule.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@schedule.errors.count, "error") %> prohibited this schedule from being saved:</h2>
+
+      <ul>
+      <% @schedule.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div id="form_part1">
+
+<table>
+<tr>
+  <td><h2>I am</h2></td>
+</tr>
+<tr>
+  <td>Name:</td>
+  <td><%=f.text_field(:name)%></td>
+</tr>
+<tr>
+  <td>Year:</td>
+  <td><%=f.text_field(:year)%></td>
+</tr>
+<tr>
+  <td align = "center" colspan=2><h2>I wanna eat:</h2></td>
+</tr>
+<tr>
+  <td align = "center" colspan=2>
+    <div class="field">
+      <div id ="meal_radio">
+      	<%= f.radio_button(:meal, "lunch") %>
+      	<%= f.label(:meal_lunch, raw("<img src=\"\"\>Lunch <br> 12:00pm-")) %>
+      	<%= f.radio_button(:meal, "edinner") %>
+      	<%= f.label(:meal_edinner, raw("<img src=\"\"/>Early Dinner <br> 6:30pm-")) %>
+      	<%= f.radio_button(:meal, "ldinner") %>
+      	<%= f.label(:meal_ldinner, raw("<img src=\"\"/>Late Dinner <br> 9:00pm-")) %>
+      </div>
+    </div>
+  </td>
+</tr>
+<tr>
+  <td align="center" colspan=2><h2>I feel like:</h2></td>
+  
+<tr>
+  <td colspan=2>
+    <div class="field">
+      <div id ="place_check">
+        <%= f.check_box(:place_mrups) %>
+        <%= f.label(:place_mrups, raw("Two Brothers")) %>
+        <%= f.check_box(:place_fireice) %>
+        <%= f.label(:place_fireice, raw("Fire & Ice")) %>
+        <%= f.check_box(:place_sabai) %>
+        <%= f.label(:place_sabai, raw("Sabai Sabai")) %>
+        <%= f.check_box(:place_pizza) %>
+        <%= f.label(:place_pizza, raw("The Grille")) %>
+        <%= f.check_box(:place_dhall) %>
+        <%= f.label(:place_dhall, raw("Proctor Dining")) %>
+      </div>
+    </div>
+  </td>
+</tr>
+<tr>
+  <td align="right">
+    <div id="schedule_submit1">
+      <%= f.label("Begin the Experiment") %>
+    </div>
+  </td>
+</tr>
+</table>
+
+</div>
+
+<script>
+$(function() {
+	$("#meal_radio").buttonset();
+	$("#place_check").buttonset();
+	$("#back1").button();
+	$("#schedule_submit1").button();
+	$("#schedule_submit1").click(function(){
+		$("#form_part1").hide("slide", {direction: "left"}, "slow", function(){$("#form_part2").show("slide", {direction: "right"}, "slow");})
+	});
+});
+
+</script>
+
+<div id="form_part2">
+
+<h2>Tell us more...</h2>
+    <ol>
+  	  <li>
+  	    Friends describe me as:<br><br>
+  	    <div id="question1Radio">
+  	      <%= f.radio_button( :question1, "ans1") %>
+  	      <%= f.label( :question1_ans1, raw("Quiet")) %>
+  	      <%= f.radio_button( :question1, "ans2") %>
+  	      <%= f.label( :question1_ans2, raw("Talkative")) %>
+  	      <%= f.radio_button( :question1, "ans3") %>
+  	      <%= f.label( :question1_ans3, raw("Engaging")) %>
+  	    </div>
+  	  </li>
+  	  <li>
+  	    Siblings:<br><br>
+  	    <div id="question2Radio">
+  	      <%= f.radio_button( :question2, "ans1") %>
+  	      <%= f.label( :question2_ans1, raw("Zero")) %>
+  	      <%= f.radio_button( :question2, "ans2") %>
+  	      <%= f.label( :question2_ans2, raw("A few")) %>
+  	      <%= f.radio_button( :question2, "ans3") %>
+  	      <%= f.label( :question2_ans3, raw("A lot")) %>
+  	    </div>
+  	  </li>
+  	  <li>
+  	    Friends would say I am:<br><br>
+  	    <div id="question3Radio">
+  	      <%= f.radio_button( :question3, "ans1") %>
+  	      <%= f.label( :question3_ans1, raw("A good listener")) %>
+  	      <%= f.radio_button( :question3, "ans2") %>
+  	      <%= f.label( :question3_ans2, raw("A fast talker")) %>
+  	      <%= f.radio_button( :question3, "ans3") %>
+  	      <%= f.label( :question3_ans3, raw("Trouble when I walk in")) %>
+  	    </div>
+  	  </li>
+  	  <li>
+  	    Football:<br><br>
+  	    <div id="question4Radio">
+  	      <%= f.radio_button( :question4, "ans1") %>
+  	      <%= f.label( :question4_ans1, raw("Soccer?")) %>
+  	      <%= f.radio_button( :question4, "ans2") %>
+  	      <%= f.label( :question4_ans2, raw("Let freedom ring")) %>
+  	      <%= f.radio_button( :question4, "ans3") %>
+  	      <%= f.label( :question4_ans3, raw("Van Get-out-of-here")) %>
+  	    </div>
+  	  </li>
+  	  <li>
+  	    <div id="question5Radio">
+  	      <%= f.radio_button( :question5, "ans1") %>
+  	      <%= f.label( :question5_ans1, raw("Cat")) %>
+  	      <%= f.radio_button( :question5, "ans2") %>
+  	      <%= f.label( :question5_ans2, raw("Dog")) %>
+  	      <%= f.radio_button( :question5, "ans3") %>
+  	      <%= f.label( :question5_ans3, raw("Neither")) %>
+  	    </div>
+  	  </li>
+  	</ol>
+  <table>
+    <tr>
+    <td>
+      <div id="schedule_back2">
+        <%= f.label("Back") %>
+      </div>
+    </td>
+    <td>
+      <div id="schedule_submit2">
+        <%= f.submit("Continue the Experiment") %>
+      </div>
+    </td>
+    </tr>
+  </table>
+</div>
+  
+  <script>
+$(function() {
+	$("#question1Radio").buttonset();
+	$("#question2Radio").buttonset();
+	$("#question3Radio").buttonset();
+	$("#question4Radio").buttonset();
+	$("#question5Radio").buttonset();
+	$("#schedule_back2").button();
+	$("#schedule_back2").click(function(){
+		$("#form_part2").hide("slide", {direction: "right"}, "slow", function(){
+		$("#form_part1").show("slide", {direction: "left"}, "slow");})
+	});
+});
+
+</script>
+  
+ 
+<% end %>

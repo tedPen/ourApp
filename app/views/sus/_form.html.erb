@@ -1,0 +1,139 @@
+<%= form_for(@su) do |f| %>
+  <% if @su.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@su.errors.count, "error") %> prohibited this su from being saved:</h2>
+
+      <ul>
+      <% @su.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="radio_field">
+    <%= f.radio_button :q1, "1" %>
+    <%= f.label(:q1, raw("Strongly Disagree<br>1")) %>
+    <%= f.radio_button :q1, "2" %>
+    <%= f.label(:q1, raw("<br>2")) %>
+    <%= f.radio_button :q1, "3" %>
+    <%= f.label(:q1, raw("<br>3")) %>
+    <%= f.radio_button :q1, "4" %>
+    <%= f.label(:q1, raw("<br>4")) %>
+    <%= f.radio_button :q1, "5" %>
+    <%= f.label(:q1, raw("Strongly Agree<br>5")) %>
+  </div>
+  <div class="radio_field">
+    <%= f.radio_button :q2, "1" %>
+    <%= f.label(:q2, raw("Strongly Disagree<br>1")) %>
+    <%= f.radio_button :q2, "2" %>
+    <%= f.label(:q2, raw("<br>2")) %>
+    <%= f.radio_button :q2, "3" %>
+    <%= f.label(:q2, raw("<br>3")) %>
+    <%= f.radio_button :q2, "4" %>
+    <%= f.label(:q2, raw("<br>4")) %>
+    <%= f.radio_button :q2, "5" %>
+    <%= f.label(:q2, raw("Strongly Agree<br>5")) %>
+  </div>
+  <div class="radio_field">
+    <%= f.radio_button :q3, "1" %>
+    <%= f.label(:q3, raw("Strongly Disagree<br>1")) %>
+    <%= f.radio_button :q3, "2" %>
+    <%= f.label(:q3, raw("<br>2")) %>
+    <%= f.radio_button :q3, "3" %>
+    <%= f.label(:q3, raw("<br>3")) %>
+    <%= f.radio_button :q3, "4" %>
+    <%= f.label(:q3, raw("<br>4")) %>
+    <%= f.radio_button :q3, "5" %>
+    <%= f.label(:q3, raw("Strongly Agree<br>5")) %>
+  </div>
+  <div class="radio_field">
+    <%= f.radio_button :q4, "1" %>
+    <%= f.label(:q4, raw("Strongly Disagree<br>1")) %>
+    <%= f.radio_button :q4, "2" %>
+    <%= f.label(:q4, raw("<br>2")) %>
+    <%= f.radio_button :q4, "3" %>
+    <%= f.label(:q4, raw("<br>3")) %>
+    <%= f.radio_button :q4, "4" %>
+    <%= f.label(:q4, raw("<br>4")) %>
+    <%= f.radio_button :q4, "5" %>
+    <%= f.label(:q4, raw("Strongly Agree<br>5")) %>
+  </div>
+  <div class="radio_field">
+    <%= f.radio_button :q5, "1" %>
+    <%= f.label(:q5, raw("Strongly Disagree<br>1")) %>
+    <%= f.radio_button :q5, "2" %>
+    <%= f.label(:q5, raw("<br>2")) %>
+    <%= f.radio_button :q5, "3" %>
+    <%= f.label(:q5, raw("<br>3")) %>
+    <%= f.radio_button :q5, "4" %>
+    <%= f.label(:q5, raw("<br>4")) %>
+    <%= f.radio_button :q5, "5" %>
+    <%= f.label(:q5, raw("Strongly Agree<br>5")) %>
+  </div>
+  <div class="radio_field">
+    <%= f.radio_button :q6, "1" %>
+    <%= f.label(:q6, raw("Strongly Disagree<br>1")) %>
+    <%= f.radio_button :q6, "2" %>
+    <%= f.label(:q6, raw("<br>2")) %>
+    <%= f.radio_button :q6, "3" %>
+    <%= f.label(:q6, raw("<br>3")) %>
+    <%= f.radio_button :q6, "4" %>
+    <%= f.label(:q6, raw("<br>4")) %>
+    <%= f.radio_button :q6, "5" %>
+    <%= f.label(:q6, raw("Strongly Agree<br>5")) %>
+  </div>
+  <div class="radio_field">
+    <%= f.radio_button :q7, "1" %>
+    <%= f.label(:q7, raw("Strongly Disagree<br>1")) %>
+    <%= f.radio_button :q7, "2" %>
+    <%= f.label(:q7, raw("<br>2")) %>
+    <%= f.radio_button :q7, "3" %>
+    <%= f.label(:q7, raw("<br>3")) %>
+    <%= f.radio_button :q7, "4" %>
+    <%= f.label(:q7, raw("<br>4")) %>
+    <%= f.radio_button :q7, "5" %>
+    <%= f.label(:q7, raw("Strongly Agree<br>5")) %>
+  </div>
+  <div class="radio_field">
+    <%= f.radio_button :q8, "1" %>
+    <%= f.label(:q8, raw("Strongly Disagree<br>1")) %>
+    <%= f.radio_button :q8, "2" %>
+    <%= f.label(:q8, raw("<br>2")) %>
+    <%= f.radio_button :q8, "3" %>
+    <%= f.label(:q8, raw("<br>3")) %>
+    <%= f.radio_button :q8, "4" %>
+    <%= f.label(:q8, raw("<br>4")) %>
+    <%= f.radio_button :q8, "5" %>
+    <%= f.label(:q8, raw("Strongly Agree<br>5")) %>
+  </div>
+  <div class="radio_field">
+    <%= f.radio_button :q9, "1" %>
+    <%= f.label(:q9, raw("Strongly Disagree<br>1")) %>
+    <%= f.radio_button :q9, "2" %>
+    <%= f.label(:q9, raw("<br>2")) %>
+    <%= f.radio_button :q9, "3" %>
+    <%= f.label(:q9, raw("<br>3")) %>
+    <%= f.radio_button :q9, "4" %>
+    <%= f.label(:q9, raw("<br>4")) %>
+    <%= f.radio_button :q9, "5" %>
+    <%= f.label(:q9, raw("Strongly Agree<br>5")) %>
+  </div>
+  <div class="radio_field">
+    <%= f.radio_button :q10, "1" %>
+    <%= f.label(:q10, raw("Strongly Disagree<br>1")) %>
+    <%= f.radio_button :q10, "2" %>
+    <%= f.label(:q10, raw("<br>2")) %>
+    <%= f.radio_button :q10, "3" %>
+    <%= f.label(:q10, raw("<br>3")) %>
+    <%= f.radio_button :q10, "4" %>
+    <%= f.label(:q10, raw("<br>4")) %>
+    <%= f.radio_button :q10, "5" %>
+    <%= f.label(:q10, raw("Strongly Agree<br>5")) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  <script>
+  	$(.radio_field).buttonset();
+<% end %>

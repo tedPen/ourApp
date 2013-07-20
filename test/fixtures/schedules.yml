@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  meal: MyText
+  place: MyText
+  question1: MyText
+  question2: MyText
+  question3: MyText
+  question4: MyText
+
+two:
+  meal: MyText
+  place: MyText
+  question1: MyText
+  question2: MyText
+  question3: MyText
+  question4: MyText
